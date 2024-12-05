@@ -94,7 +94,7 @@
                                     <div class="d-flex">
                                         <div class="flex-shrink-0 me-3">
                                             <div class="avatar">
-                                                <img src="../../assets/img/avatars/2.png" alt
+                                                <img src="" alt
                                                     class="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@
                                     <div class="d-flex">
                                         <div class="flex-shrink-0 me-3">
                                             <div class="avatar">
-                                                <img src="../../assets/img/avatars/9.png" alt
+                                                <img src="" alt
                                                     class="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </div>
@@ -181,7 +181,7 @@
                                     <div class="d-flex">
                                         <div class="flex-shrink-0 me-3">
                                             <div class="avatar">
-                                                <img src="../../assets/img/avatars/5.png" alt
+                                                <img src="" alt
                                                     class="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </div>
@@ -202,7 +202,7 @@
                                     <div class="d-flex">
                                         <div class="flex-shrink-0 me-3">
                                             <div class="avatar">
-                                                <img src="../../assets/img/avatars/6.png" alt
+                                                <img src="" alt
                                                     class="w-px-40 h-auto rounded-circle" />
                                             </div>
                                         </div>
