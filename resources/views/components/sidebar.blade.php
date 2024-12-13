@@ -1,7 +1,7 @@
 <!-- Sidebar Menu -->
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="index.html" class="app-brand-link">
+        <a href="{{ route('dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -38,7 +38,7 @@
                     </g>
                 </svg>
             </span>
-            <span class="app-brand-text demo menu-text fw-bold ms-2">Frest</span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2">IAMS</span>
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -52,81 +52,45 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <!-- Dashboards -->
-        <li class="menu-item active open">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <!-- Dashboard -->
+        <li class="menu-item {{ Request::routeIs('dashboard') ? 'open active' : '' }}">
+            <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Dashboards">Dashboards</div>
+                <div data-i18n="Dashboard">Dashboard</div>
             </a>
-            <ul class="menu-sub">
-                <li class="menu-item active">
-                    <a href="index.html" class="menu-link">
-                        <div data-i18n="Analytics">Analytics</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="dashboards-ecommerce.html" class="menu-link">
-                        <div data-i18n="eCommerce">eCommerce</div>
-                    </a>
-                </li>
-            </ul>
         </li>
 
-        <!-- Layouts -->
-        <li class="menu-item">
+        <!-- Master Data -->
+        <li class="menu-item {{ Request::routeIs('master.*') ? 'open active' : '' }}">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+                <div data-i18n="Master Data">Master Data</div>
             </a>
 
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="layouts-collapsed-menu.html" class="menu-link">
-                        <div data-i18n="Collapsed menu">Collapsed menu</div>
+            {{-- <ul class="menu-sub">
+                <li class="menu-item {{ Request::routeIs('master.province') ? 'active' : '' }}">
+                    <a href="{{ route('master.province') }}" class="menu-link">
+                        <div data-i18n="Provinces">Province</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="layouts-content-navbar.html" class="menu-link">
-                        <div data-i18n="Content navbar">Content navbar</div>
+                <li class="menu-item {{ Request::routeIs('master.district') ? 'active' : '' }}">
+                    <a href="{{ route('master.district') }}" class="menu-link">
+                        <div data-i18n="District">District</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
-                        <div data-i18n="Content nav + Sidebar">Content nav + Sidebar</div>
+                <li class="menu-item {{ Request::routeIs('master.tehsil') ? 'active' : '' }}">
+                    <a href="{{ route('master.tehsil') }}" class="menu-link">
+                        <div data-i18n="Tehsil">Tehsil</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="../horizontal-menu-template" class="menu-link" target="_blank">
-                        <div data-i18n="Horizontal">Horizontal</div>
+                <li class="menu-item {{ Request::routeIs('master.vc-nc') ? 'active' : '' }}">
+                    <a href="{{ route('master.vc-nc') }}" class="menu-link">
+                        <div data-i18n="VC/NC">VC/NC</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
-                        <div data-i18n="Without menu">Without menu</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                        <div data-i18n="Without navbar">Without navbar</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-fluid.html" class="menu-link">
-                        <div data-i18n="Fluid">Fluid</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-container.html" class="menu-link">
-                        <div data-i18n="Container">Container</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-blank.html" class="menu-link">
-                        <div data-i18n="Blank">Blank</div>
-                    </a>
-                </li>
-            </ul>
+            </ul> --}}
         </li>
+
 
         <!-- Apps & Pages -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Apps &amp; Pages</span></li>
@@ -898,31 +862,40 @@
             </ul>
         </li>
 
-        <!-- Charts & Maps -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">Charts &amp; Maps</span></li>
+        <!-- User Management -->
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Users &amp; Managements</span></li>
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-chart"></i>
-                <div data-i18n="Charts">Charts</div>
+                <div data-i18n="User Management">User Management</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="charts-apex.html" class="menu-link">
-                        <div data-i18n="Apex Charts">Apex Charts</div>
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Users">Users</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="charts-chartjs.html" class="menu-link">
-                        <div data-i18n="ChartJS">ChartJS</div>
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Roles">Roles</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Permissions">Permissions</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div data-i18n="Password Reset Request">Password Reset Request</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <div data-i18n="User Log">User Log</div>
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
-            <a href="maps-leaflet.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-map-alt"></i>
-                <div data-i18n="Leaflet Maps">Leaflet Maps</div>
-            </a>
         </li>
 
         <!-- Misc -->
