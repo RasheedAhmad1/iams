@@ -4,8 +4,8 @@ A step-by-step approach to begin with **Integrated Advertisement Management Syst
 ### **Step 1: Planning and Requirements Gathering**
 1. **Features and Functionalities**  
    What the system should do:
-   - User roles (admin, advertiser, viewer, etc.).
-   - Manage advertisements (creation, editing, deletion).
+   - User roles (admin,super_intendent, deputy_director, director_general department, media).
+   - Manage advertisements (creation, editing, , cancellation).
    - View analytics (clicks, views, performance).
    - Payment or subscription handling (if applicable).
 
