@@ -78,10 +78,10 @@ A detailed explanation of the fully functional database using MySQL Server, incl
 ### **Step 1: Requirements Analysis and Defining Data Entities**
 From IAMS requirements, the following are the key entities that might be required:
 
-- **Users**: Admin, Advertiser(Departments & Sub-offices), Medias. Users can create advertisements and make payments.  
+- **Users**: Admin, Advertiser (Departments & Sub-offices), Medias (Newspapers and Advertising Agencies. Users can create advertisements and make payments.
 - **Advertisements**: Each ad has a title, description, media, and status.  
 - **Categories**: Ads are grouped into categories.   
-- **Payments**: Track payments made by users.
+- **Payments**: Track payments made by users against each ad.
 
 ### **Step 2: Define Attributes for Each Entity**
 Each entity will have attributes (columns). Focus on the **primary key (PK)** and other fields.
