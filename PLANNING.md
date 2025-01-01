@@ -1,6 +1,6 @@
 # Project Planning
 
-## [What is Integrated Advertisement Management System?](IAMS.md)
+## [What is Integrated Advertisement Management System?](README.md)
 
 ## Planning Docs
 This document outlines a step-by-step plan for the development of the **Integrated Advertisement Management System (IAMS)**:
