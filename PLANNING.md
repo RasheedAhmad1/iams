@@ -89,7 +89,7 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 #### Examples:
 - **Users**
   - PK: `id`
-  - Attributes: `name`, `email`, `password`, `role`, `created_at`, `updated_at`.
+  - Attributes: `name`, `user_name`, `password`, `designation`, `role`, `user_pic`, `status`, `created_at`, `updated_at`.
 
 - **Advertisements**
   - PK: `id`
