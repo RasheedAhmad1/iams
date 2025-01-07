@@ -89,19 +89,55 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 #### Examples:
 - **Users**
   - PK: `id`
-  - Attributes: `name`, `user_name`, `password`, `designation`, `role`, `user_pic`, `status`, `created_at`, `updated_at`.
-
-- **Advertisements**
+  - Attributes: `name`, `user_name`, `password`, `designation`, `role`, `image`, `status`, `created_at`, `updated_at`.
+ 
+- **Departments**
   - PK: `id`
-  - Attributes: `user_id` (FK), `category_id` (FK), `title`, `description`, `media_url`, `status`, `created_at`, `updated_at`.
-
-- **Categories**
+  - Attributes: `name`, `user_id` (FK).
+ 
+- **offices**
   - PK: `id`
-  - Attributes: `name`, `description`, `created_at`, `updated_at`.
+  - Attributes: `name`,`department_id` (FK).
 
-- **Payments**
+- **Ads**
   - PK: `id`
-  - Attributes: `user_id` (FK), `amount`, `payment_date`, `status`.
+  - Attributes: `user_id` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `english_size`, `urdu_size`, `no_of_lines`, `position_id`, `newspaper_id (array)` (FK), `status`, `covering_letter`, `english_ad`, `urdu_ad`, `created_at`, `updated_at`.
+ 
+- **Ad_categories**
+  - PK: `id`
+  - Attributes: `title`, `description`, `created_at`, `updated_at`.
+
+- **Newspapers**
+  - PK: `id`
+  - Attributes: `name`, `periodicity_id` (FK), `language_id` (FK), `jurisdiction_id` (FK), `district_id` (FK), `KPRA_registration`, `rate`, `registration_date`, `status`.
+ 
+- **Newspaper_positions_and_rates**
+  - PK: `id`
+  - Attributes: `position`, `rate`.
+ 
+- **Newspaper_Periodicities**
+  - PK: `id`
+  - Attributes: `title`.
+ 
+- **Languages**
+  - PK: `id`
+  - Attributes: `title`.
+ 
+- **Jurisdictions** (Service area: National, Provincial or Local - Prior it was Category)
+  - PK: `id`
+  - Attributes: `title`.
+ 
+- **Provinces**
+  - PK: `id`
+  - Attributes: `name`.
+ 
+- **Districts**
+  - PK: `id`
+  - Attributes: `name`, `province_id` (FK).
+ 
+- **Ad_worths**
+  - PK: `id`
+  - Attributes: `range`, `description`, `formula`, `created_at`, `updated_at`.
 
 ### **Step 3: Define Relationships**
 Establish relationships between entities. Relationships are based on how entities interact.
