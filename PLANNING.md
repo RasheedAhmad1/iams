@@ -117,7 +117,7 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 
 - **Newspapers**
   - PK: `id`
-  - Attributes: `name`, `periodicity_id` (FK), `language_id` (FK), `jurisdiction_id` (FK), `district_id` (FK), `KPRA_registration`, `rate`, `registration_date`, `status`.
+  - Attributes: `name`, `periodicity_id` (FK), `language_id` (FK), `jurisdiction_id` (FK), `district_id` (FK), `status_id` (FK), `KPRA_registration`, `rate`, `registration_date`.
  
 - **Newspaper_positions_and_rates**
   - PK: `id`
@@ -146,6 +146,10 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 - **Ad_worths**
   - PK: `id`
   - Attributes: `range`, `description`, `formula`, `created_at`, `updated_at`.
+ 
+- **Statuses**
+  - PK: `id`
+  - Attributes: `title (active, inactive, new, pending, cancelled, rejected, in_progress, approved)`, `created_at`, `updated_at`.
 
 ### **Step 3: Define Relationships**
 Establish relationships between entities. Relationships are based on how entities interact.
