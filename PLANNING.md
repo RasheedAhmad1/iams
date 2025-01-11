@@ -107,9 +107,9 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
   - PK: `id`
   - Attributes: `name`,`department_id` (FK).
 
-- **Ads**
+- **Advertisements**
   - PK: `id`
-  - Attributes: `user_id` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `english_size`, `urdu_size`, `no_of_lines`, `position_id`, `newspaper_id (array)` (FK), `status`, `covering_letter`, `english_ad`, `urdu_ad`, `created_at`, `updated_at`.
+  - Attributes: `inf_number` (FK), `user_id` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `english_size`, `urdu_size`, `no_of_lines`, `position_id`, `newspaper_id (array)` (FK), `status`, `covering_letter`, `english_ad`, `urdu_ad`, `created_at`, `updated_at`.
  
 - **Ad_categories**
   - PK: `id`
