@@ -109,7 +109,16 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 
 - **Advertisements**
   - PK: `id`
-  - Attributes: `inf_number` (FK), `user_id` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `english_size`, `urdu_size`, `no_of_lines`, `position_id`, `newspaper_id (array)` (FK), `status`, `covering_letter`, `english_ad`, `urdu_ad`, `created_at`, `updated_at`.
+  - Attributes: `status_id` (FK), `inf_series` (FK), `inf_number`, `user_id (Department & Office)` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `newspaper_id (multiple newspapers)` (FK), `agency_id (newspaper or agency: one of these)` (FK), `position_id` (FK), `memo_no`, `memo_date`, `publish_on_or_before`, `english_lines`, `urdu_lines`, `english_size`, `urdu_size`, `covering_letter_pdf`, `english_ad_pdf`, `urdu_ad_pdf`, `created_at`, `updated_at`.
+ 
+  - --------------------------------------- Test Attributes -------------------------------------------
+- **Advertisements**
+  - PK: `id`
+  - Attributes: `inf_number`, `inf_series_id` (FK), `title`, `description`, `created_at`, `updated_at`.
+- **inf_series**
+  - PK: `id`
+  - Attributes: `series`, `started_number`, `issued_numbers`, `created_at`, `updated_at`.
+  - ---------------------------------------------------------------------------------------------------
  
 - **Ad_categories**
   - PK: `id`
