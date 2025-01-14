@@ -27,7 +27,7 @@ This document outlines a step-by-step plan for the development of the **Integrat
 3. **Database Design** 
     - Tables/Intities we'll need (e.g., users, ads, categories)
     - Relationships between the tables (e.g., users create ads, ads belong to categories).
-    - [Schemas Creation section](#schemas-creation) for designing Schemas
+    - [Schemas Creation section](#schema-creation) for designing Schemas
 
 4. **Data Flow Diagram**
     - Use Lucidchart to create DFD.
@@ -72,7 +72,7 @@ This document outlines a step-by-step plan for the development of the **Integrat
 3. **Mobile Responsiveness**  
     - Ensure the app is fully responsive on different devices like desktop, mobile and tablets etc.
 
-## Schemas Creation
+## Schema Creation
 A detailed explanation of the fully functional database using MySQL Server, including schemas, ERD, and relationships.
 
 ### **Step 1: Requirements Analysis and Defining Data Entities**
@@ -109,16 +109,11 @@ Each entity will have attributes (columns). Focus on the **primary key (PK)** an
 
 - **Advertisements**
   - PK: `id`
-  - Attributes: `status_id` (FK), `inf_series` (FK), `inf_number`, `user_id (Department & Office)` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `newspaper_id (multiple newspapers)` (FK), `agency_id (newspaper or agency: one of these)` (FK), `position_id` (FK), `memo_no`, `memo_date`, `publish_on_or_before`, `english_lines`, `urdu_lines`, `english_size`, `urdu_size`, `covering_letter_pdf`, `english_ad_pdf`, `urdu_ad_pdf`, `created_at`, `updated_at`.
+  - Attributes: `inf_number`, `inf_series` (FK), `memo_number`, `memo_date`, , `publish_on_or_before`, `urdu_size`, `english_size`, `urdu_lines`, `english_lines`, `covering_letter`, `english_ad`, `urdu_ad`, `user_id (Department & Office)` (FK), `category_id` (FK), `ad_worth_id (estimated cost)` (FK), `newspaper_id (multiple newspapers)` (FK), `agency_id (newspaper or agency: one of these)` (FK), `position_id` (FK), `status_id` (FK), `created_at`, `updated_at`.
  
-  - --------------------------------------- Test Attributes -------------------------------------------
-- **Advertisements**
-  - PK: `id`
-  - Attributes: `inf_number`, `inf_series_id` (FK), `title`, `description`, `created_at`, `updated_at`.
 - **inf_series**
   - PK: `id`
   - Attributes: `series`, `started_number`, `issued_numbers`, `created_at`, `updated_at`.
-  - ---------------------------------------------------------------------------------------------------
  
 - **Ad_categories**
   - PK: `id`
